@@ -1,0 +1,6 @@
+# For physics topics, use the specific subtopics, e.g. "Astrophysics"
+topic: "Computer Science"
+# An empty list here will include all categories in a topic
+# Use the natural language names of the topics, found here: https://arxiv.org
+# Including more categories will result in more calls to the large language model
+categories: ["Computation and Language", "Human-Computer Interaction"]

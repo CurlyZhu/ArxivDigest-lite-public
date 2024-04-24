@@ -1,0 +1,6 @@
+beautifulsoup4==4.12.3
+numpy==1.26.4
+openai==1.23.2
+pytz==2023.3.post1
+PyYAML==6.0.1
+tqdm==4.66.2
