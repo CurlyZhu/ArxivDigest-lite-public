@@ -86,13 +86,12 @@ def post_process_chat_gpt_response(paper_data, response):
     if response is None:
         return []
     json_items = response.replace("\n\n", "\n").split("\n")
-    #pattern = r"^\d+\. |\\"
+    pattern = r"\\[^\"\'bfnrtu\\]"
     try:
         score_items = [
-            json.loads(line) #re.sub(pattern, "", line))
+            json.loads(re.sub(pattern, "", line))
             for line in json_items if "score" in line.lower()]
     except Exception:
-        print([re.sub(pattern, "", line) for line in json_items if "score" in line.lower()])
         raise RuntimeError("failed")
     #print(score_items)
     scores = []
